@@ -9,31 +9,35 @@
       <!-- CSS Link -->
 	    <link rel="stylesheet" type="text/css" href="./index.css">
 	<title>My Web Portfolio</title>
-	<!-- Google Fonts Link-->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Font Link Kits -->
-  <script
-      src="https://kit.fontawesome.com/6529d4b16f.js"
-      crossorigin="anonymous"
-    ></script>
+  	<!-- Google Fonts Link-->
+  	<link rel="preconnect" href="https://fonts.googleapis.com">
+  	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Link Kits -->
+    <script
+        src="https://kit.fontawesome.com/6529d4b16f.js"
+        crossorigin="anonymous"
+      ></script>
+    <script type="text/javascript" src="./index.js">
+      /*alert("Hello World")*/
+    </script>
 
 </head>
-<body class="bg-dark">
+<body class="bg-dark text-white">
 
   <!-- To make the elements in the navbar collapse into a burger menu on smaller screens, you can add the Bootstrap navbar-toggler and navbar-toggler-icon the navbar-toggler button is added right after the navbar-brand element. When the button is clicked, it toggles the visibility of the navbarNav div which contains the navbar items.  -->
 	<!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#"><img src="./images/icon.png"></a>
+    <a class="navbar-brand" href="#landing"><img src="./images/icon.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="border-bottom border-danger collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
+
         <li class="nav-item">
-          <a class="nav-link" href="#landing">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#about">About Me<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contacts<span class="sr-only">(current)</span></a>
@@ -44,55 +48,171 @@
         <li class="nav-item">
           <a class="nav-link" href="#tools">Tools</a>
         </li>
+
       </ul>
     </div>
   </nav>
   <!-- End of Navbar -->
 
   <!-- Landing -->
-  <div id="landing" class="d-inline-block text-white mt-5 pt-5 mb-5">
-    <div class="row">
-      <div class="col-md-6 mx-auto">
-        <div class="ml-4 mr-4">
-          <h1 class="d-inline-block">Nicolas G Escaros Jr</h1>
-          <h6>Full-Stack Web Developer</h6>
-          <img src="./images/me.jpg" width="150" class="img-fluid rounded-pill" alt="Profile Picture">
+    <div id="landing" class="full-page bg-image container-fluid d-flex align-items-center justify-content-center text-white" style="height: 600px">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <h1>Nicolas Escaros Jr</h1>
+            <div>
+              <h6 class="text-danger">Full-Stack Web Developer</h6>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 m-3 p-4 mx-auto justify-content-center d-inline">
-        <p>
-          An experienced Engineer with a background in the telecom and sales industries, seeking a career transition into software engineering. Possesses a strong foundation in project management, problem-solving and communication skills. Holding a deep understanding of programming languages and development tools and demonstrated ability to work effectively in a team environment.
-        </p>
+    </div>
+    <!-- End Of Landing -->
+  <!-- About Me Section -->
+  <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1 col-sm-6 col-md-4 col-lg-3">
+            <img src="images/me.jpg" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <p>
+              An experienced engineer with a bachelor's degree in Electronics
+              and communication engineering and a background in the telecom and
+              sales industries, seeking a career transition into software
+              engineering. Possesses a strong foundation in project management,
+              problem-solving and communication skills. Holding a deep
+              understanding of programming languages and development tools and
+              demonstrated ability to work effectively in a team environment.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Programming languages</span><br />Python, JavaScript, HTML, CSS,
+                  C++, Java
+                </li>
+                <li>
+                  <span>Software development tools</span><br />Sublime test, Git, Gitlab/Github, Postman, MongoDB, VScode, InteliJ, Heroku, expressJS, reactJS, nodeJS, Bootstrap, Pycharm, tkinter
+                </li>
+                <li><span>Project management</span><br />Agile, Scrum</li>
+                <li>
+                  <span>Communication</span><br />Interpersonal skills,
+                  technical writing, presentation skills
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>Feb 2021 - Dec 2022</span><br />On-site project Engineer
+                </li>
+                <li>
+                  <span>Aug 2020 - Jan 2021</span><br />Team leader/Technical
+                  Engineer
+                </li>
+                <li>
+                  <span>Jan 2019 - Aug 2020</span><br />Application support
+                  Engineer
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>June 2013 - June 2018</span><br />Bachelor of science in
+                  electronics and communication engineering
+                </li>
+                <li>
+                  <span>June 2009 - Aug 2010</span><br />Aviation electronics
+                  technology
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+
+  <!-- End About Me Section -->
 
   <!-- Projects -->
-  <div id="projects" class="container-fluid p-5 bg-none text-white">
-    <h1>Projects</h1>
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="border border-danger p-4 bg-dark text-center text-white">
-          <img src="./images/Project 1.png" class="img-fluid">
-          <p>A Simple Contact form</p>
+  <div id="projects">
+    <div id="services">
+        <div class="container">
+          <div class="row">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="services-list">
+              <div>
+                <i class="fa-brands fa-html5"></i>
+                <h2>Web Design</h2>
+                <p>
+                  Designing and implementing user-friendly and visually appealing
+                  website layouts using HTML, CSS, JavaScript and Bootstrap. Developing
+                  responsive web designs that are optimized for mobile, tablet, and
+                  desktop devices.
+                </p>
+                <a href="https://nicolasescarosjr.github.io/webportfolio/">Learn more</a>
+              </div>
+              <div>
+                <i class="fa-brands fa-python"></i>
+                <h2>Python programming</h2>
+                <p>
+                  Desktop GUI Applications: Python provides libraries such as Tkinter, PyQt, and wxPython for building desktop GUI (Graphical User Interface) applications. These libraries enable developers to create interactive and user-friendly applications.
+                </p>
+                <a href="images/app.py">Learn more</a>
+              </div>
+              <div>
+                <i class="fa-brands fa-uncharted"></i>
+                <h2>Web App Developer</h2>
+                <p>
+                  Developing user-friendly and responsive web applications using
+                  HTML, CSS, and JavaScript
+                </p>
+                <a href="https://nicolasescarosjr.github.io/nicolasescarosjrtask/my_task.html">Learn more</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="border border-danger p-4 bg-dark text-center">
-          <img src="./images/Project 2.png" class="img-fluid">
-          <p>CSS and Bootstrap Flex</p>
+      <div class="container p-5 bg-none text-white">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="border border-danger bg-dark text-center text-white">
+                <img src="./images/Project 1.png" class="img-fluid">
+                <p>A Simple Contact Form</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="border border-danger bg-dark text-center">
+                <img src="./images/Project 2.png" class="img-fluid">
+                <p>CSS and Bootstrap Flex</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="border border-danger bg-dark text-center text-white">
+                <img src="./images/Project 3.png" class="img-fluid">
+                <p>Bootstrap Introduction and Simple Styles</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="border border-danger p-4 bg-dark text-center text-white">
-          <img src="./images/Project 3.png" class="img-fluid">
-          <p>Bootstrap Introduction and Simple Styles</p>
-        </div>
-      </div>
-    </div>
   </div>
-
-  <!-- End of Projects -->
+<!-- End of Projects -->
 
 <!--------------Contact--------------->
  <div id="contact" class="container-fluid p-5 bg-dark">
@@ -101,9 +221,8 @@
        <div class="contact-left">
          <h1 class="sub-title">Contact Me</h1>
          <p>
-           <i class="fa-solid fa-paper-plane"></i>jrnicolasescaros@gmail.com
+           <i class="text-danger fa-solid fa-paper-plane"></i><a href="mailto:jrnicolasescaros@gmail.com" class="text-white">Email me</a>
          </p>
-         <p><i class="fa-solid fa-square-phone"></i>+639457031977</p>
          <div class="social-icons">
            <a href="https://www.facebook.com/nicolas.escaros.7/"
              ><i class="fa-brands fa-square-facebook"></i
@@ -119,7 +238,7 @@
          <a
            href="images/NicolasEscaros_ResumeSE.pdf"
            download
-           class="btn btn2"
+           class="btn btn2 text-white"
            >Download Resume</a
          >
        </div>
@@ -137,7 +256,7 @@
              rows="6"
              placeholder="Your Message"
            ></textarea>
-           <button type="submit" class="btn btn2">Submit</button>
+           <button type="submit" class="btn btn2 text-white">Submit</button>
          </form>
        </div>
      </div>
@@ -146,43 +265,42 @@
  <!-- End of Contacts -->
  
  <!-- Tools Section Start -->
- <div id="tools" class="mb-4">
-
-     <!-- Core Tools Section Start -->
-     <h3 class="text-center">Core Tools</h3>
-     <div class="container d-flex flex-column">
-         <div class="d-flex justify-content-center">
-             <img width="150" src="images/logo-html5.png"/>
-         </div>
-         <div class="d-flex justify-content-center">
-             <img width="150" src="images/logo-css3.png"/>
-             <img width="150" src="images/logo-javascript.png"/>
-         </div>
+ <div id="tools" class="bg-dark mb-4 mt-5 p-4">
+   <!-- Core Tools Section Start -->
+   <h3 class="text-center">Core Tools</h3>
+   <div class="container d-flex flex-column">
+     <div class="d-flex justify-content-center">
+       <img width="150" src="images/logo-html5.png" class="fade-transition img-hover" />
      </div>
-     <!-- Core Tools Section End -->
-             
-     <!-- Other Tools Section Start -->
-     <h3 class="text-center mt-3">Other Tools</h3>
-
-     <div class="d-flex flex-md-column">
-         <div class="d-md-flex justify-content-center">
-             <img width="150" src="images/logo-mongodb.png"/>
-             <img width="150" src="images/logo-nodejs.png"/>
-             <img width="150" src="images/logo-expressjs.png"/>
-             <img width="150" src="images/logo-react.png"/>
-             <img width="150" src="images/logo-heroku.png"/>
-         </div>
-         <div class="d-md-flex justify-content-center mt-3">
-             <img width="150" src="images/logo-git.png"/>
-             <img width="150" src="images/logo-sublime-text-3.png"/>
-             <img width="150" src="images/logo-postman.png"/>
-             <img width="150" src="images/logo-gitlab-ci-cd.png"/>
-         </div>
+     <div class="d-flex justify-content-center">
+       <img width="150" src="images/logo-css3.png" class="fade-transition img-hover" />
+       <img width="150" src="images/logo-javascript.png" class="fade-transition img-hover" />
      </div>
-     <!-- Other Tools Section End -->
-     
+   </div>
+   <!-- Core Tools Section End -->
+   
+   <!-- Other Tools Section Start -->
+   <h3 class="text-center mt-3">Other Tools</h3>
+   
+   <div class="d-flex flex-md-column">
+     <div class="d-md-flex justify-content-center">
+       <img width="150" src="images/logo-mongodb.png" class="fade-transition img-hover" />
+       <img width="150" src="images/logo-nodejs.png" class="fade-transition img-hover" />
+       <img width="150" src="images/logo-expressjs.png" class="fade-transition img-hover" />
+       <img width="150" src="images/logo-react.png" class="fade-transition img-hover" />
+       <img width="150" src="images/logo-heroku.png" class="fade-transition img-hover" />
+     </div>
+     <div class="d-md-flex justify-content-center mt-3">
+       <img width="150" src="images/logo-git.png" class="fade-transition img-hover" />
+       <img width="150" src="images/logo-sublime-text-3.png" class="fade-transition img-hover" />
+       <img width="150" src="images/logo-postman.png" class="fade-transition img-hover" />
+       <img width="150" src="images/logo-gitlab-ci-cd.png" class="fade-transition img-hover" />
+     </div>
+   </div>
+   <!-- Other Tools Section End -->
  </div>
  <!-- Tools Section End -->
+
 
  <!-- Footer -->
       <nav class="text-center text-white bg-dark">
