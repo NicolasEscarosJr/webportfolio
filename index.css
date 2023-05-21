@@ -3,6 +3,9 @@
   font-family: roboto, sans-serif;
   te
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   overflow-x: hidden;
